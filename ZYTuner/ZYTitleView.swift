@@ -25,7 +25,6 @@ struct ZYTitleView: View {
             }
         }
         .foregroundColor(.white)
-        .frame(height: 68)
     }
 }
 

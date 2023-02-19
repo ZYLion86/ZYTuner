@@ -37,18 +37,18 @@ struct ZYMainView: View {
         ZStack(alignment: .center) {
             ZYGridView()
             VStack(spacing: 0) {
-                Spacer().frame(height: 68)
+                ZYTitleView()
                 Spacer()
                 ZYHUD(detector: detector, selectedNote: $selectedNote, selectedOctave: $selectedOctave)
-                Spacer().frame(height: 20)
+                Spacer()
                 TabView {
                     ZYGuitarView(selected: $selected, selectedNote: $selectedNote, selectedOctave: $selectedOctave)
                     ZYUkuleleView(selected: $selected, selectedNote: $selectedNote, selectedOctave: $selectedOctave)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
-                .frame(height: 300)
-                Spacer().frame(height: 20)
             }
+            .padding(.horizontal)
+            .padding(.vertical, 24)
             .onChange(of: scenePhase) { phase in
                 switch phase {
                 case .active:
@@ -72,13 +72,8 @@ struct ZYMainView: View {
             .alert(isPresented: $detector.showMicrophoneAccessAlert) {
                 MicrophoneAccessAlert()
             }
-            VStack(spacing: 0) {
-                Spacer().frame(height: 44)
-                ZYTitleView()
-                Spacer()
-            }
-            .padding(.horizontal)
         }
+        .navigationBarHidden(true)
         .background(Color.black)
     }
     

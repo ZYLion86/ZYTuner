@@ -79,7 +79,6 @@ struct ZYHUD: View {
             }
             .animation(.easeInOut, value: distance.cents)
         }
-        .frame(height: 240)
     }
     
     private func offsetX(_ width: CGFloat) -> CGFloat {
