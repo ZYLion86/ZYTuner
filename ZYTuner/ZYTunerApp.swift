@@ -10,9 +10,9 @@ import SwiftUI
 @main
 struct ZYTunerApp: App {
     init() {
-        UINavigationBar.appearance().tintColor = .black
-        UINavigationBar.appearance().barTintColor = .black
-        UIBarButtonItem.appearance().tintColor = .black
+        UINavigationBar.appearance().tintColor = .white
+        UINavigationBar.appearance().barTintColor = .white
+        UIBarButtonItem.appearance().tintColor = .white
     }
     
     var body: some Scene {

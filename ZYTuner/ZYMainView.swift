@@ -73,8 +73,8 @@ struct ZYMainView: View {
                 MicrophoneAccessAlert()
             }
         }
+        .preferredColorScheme(.dark)
         .navigationBarHidden(true)
-        .background(Color.black)
     }
     
     private func startAudio() {
